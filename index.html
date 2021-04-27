@@ -19,19 +19,19 @@
     
     
       const answer =  prompt('タスクを入力してください');
-      items.push(answer)
+      items.push(answer);
      
      console.log(title);
       items.map((value,index) => {
         console.log(index + ' : ' + value);
       });
 
-      alert('新しいタスクを追加しました')
+      alert('新しいタスクを追加しました');
       const result = prompt('「確認,追加,削除,終了」の4つのいずれかを入力してください')
 
     
       if (result === '確認'){
-        alert(items)
+        alert(items);
       } else if (result === '追加'){
         const pulas =  prompt('タスクを入力してください');
         items.push(pulas);
