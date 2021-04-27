@@ -8,43 +8,43 @@
     <script>
       'use strict';
       
-      let items = ['掃除',"買い物","散歩"];
+      const items = ['掃除',"買い物","散歩"];
       const title = ('======================= \n 現在持っているタスク一覧 \n=======================');
       console.log(title);
-
+      
       items.map((value,index) => {
-        console.log('' + index + ' : ' + value + '');
+        console.log(index + ' : ' + value);
       });
 
     
     
-      let answer =  prompt('タスクを入力してください');
+      const answer =  prompt('タスクを入力してください');
       items.push(answer)
      
      console.log(title);
       items.map((value,index) => {
-        console.log('' + index + ' : ' + value + '');
+        console.log(index + ' : ' + value);
       });
 
       alert('新しいタスクを追加しました')
-      let result = prompt('「確認,追加,削除,終了」の4つのいずれかを入力してください')
+      const result = prompt('「確認,追加,削除,終了」の4つのいずれかを入力してください')
 
     
-      if(result === '確認'){
+      if (result === '確認'){
         alert(items)
-      } else if(result === '追加'){
-        let pulas =  prompt('タスクを入力してください');
+      } else if (result === '追加'){
+        const pulas =  prompt('タスクを入力してください');
         items.push(pulas);
         console.log(title);
         items.map((value,index) => {
-        console.log('' + index + ' : ' + value + '');
+          console.log(index + ' : ' + value);
       });
 
-      } else if(result === '削除'){
-        let del = prompt('どの項目を削除しますか？')
+      } else if (result === '削除'){
+        const del = prompt('どの項目を削除しますか？')
       console.log(title);
       items.map((value,index) => {
-        console.log('' + index + ' : ' + value + '');
+        console.log(index + ' : ' + value);
       });
     }
   
