@@ -12,19 +12,20 @@
       const title = ('======================= \n 現在持っているタスク一覧 \n=======================');
       console.log(title);
       
-      items.map((value,index) => {
+      const itemMap = function(){
+        items.map((value,index) => {
         console.log(index + ' : ' + value);
       });
+      };
 
+      itemMap();
     
     
       const answer =  prompt('タスクを入力してください');
       items.push(answer);
      
      console.log(title);
-      items.map((value,index) => {
-        console.log(index + ' : ' + value);
-      });
+     itemMap();
 
       alert('新しいタスクを追加しました');
       const result = prompt('「確認,追加,削除,終了」の4つのいずれかを入力してください')
@@ -36,16 +37,12 @@
         const pulas =  prompt('タスクを入力してください');
         items.push(pulas);
         console.log(title);
-      items.map((value,index) => {
-        console.log(index + ' : ' + value);
-      });
+      itemMap();
 
       } else if (result === '削除'){
         const del = prompt('どの項目を削除しますか？')
       console.log(title);
-      items.map((value,index) => {
-        console.log(index + ' : ' + value);
-      });
+      itemMap();
     }
   
 
