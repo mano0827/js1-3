@@ -1,0 +1,51 @@
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>1-3</title>
+  </head>
+  <body>
+    
+    <script>
+      'use strict';
+      
+      const items = ['掃除',"買い物","散歩"];
+      const title = ('======================= \n 現在持っているタスク一覧 \n=======================');
+      console.log(title);
+      
+      const itemMap = function(){
+        items.map((value,index) => {
+        console.log(index + ' : ' + value);
+      });
+      };
+
+      itemMap();
+    
+    
+      const answer =  prompt('タスクを入力してください');
+      items.push(answer);
+     
+     console.log(title);
+     itemMap();
+
+      alert('新しいタスクを追加しました');
+      const result = prompt('「確認,追加,削除,終了」の4つのいずれかを入力してください')
+
+    
+      if (result === '確認'){
+        alert(items);
+      } else if (result === '追加'){
+        const pulas =  prompt('タスクを入力してください');
+        items.push(pulas);
+        console.log(title);
+      itemMap();
+
+      } else if (result === '削除'){
+        const del = prompt('どの項目を削除しますか？')
+      console.log(title);
+      itemMap();
+    }
+  
+
+    </script>
+  </body>
+</html>
